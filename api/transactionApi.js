@@ -6,6 +6,6 @@ const TransactionController = require('../controllers/transactionController');
 module.exports =  () => {
     router.post('/do-transaction', TransactionController.doTranscation);    
     router.get('/get-transactions-by-account-done', TransactionController.fetchDoneTransactions);
-    router.get('/get-transactions-by-account-got', TransactionController.fetchDoneTransactions);
+    router.get('/get-transactions-by-account-got', TransactionController.fetchGotTransactions);
     return router;
 }
