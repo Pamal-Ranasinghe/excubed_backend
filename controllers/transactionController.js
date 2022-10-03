@@ -1,6 +1,11 @@
 const Transaction = require('../models/transactionModel');
 const Account = require('../models/accountModel');
 
+/**
+ * This function is used to transfer money from one account to another
+ * @param {account_balance_from, account_balance_to, amount} req 
+ * @param {data} res 
+ */
 const doTranscation = async (req, res) => {
     try{
         let {account_number_from, account_number_to, amount} = req.body;
@@ -34,6 +39,11 @@ const doTranscation = async (req, res) => {
     
 }
 
+/**
+ * This function is used to fetch all the done transactions
+ * @param {account_number} req 
+ * @param {data} res 
+ */
 const fetchDoneTransactions = async (req, res) => {
     try{
         let {account_number} = req.body;
@@ -50,6 +60,11 @@ const fetchDoneTransactions = async (req, res) => {
     
 }
 
+/**
+ * This function is used to fetch all the got transactions
+ * @param {account_number} req 
+ * @param {data} res 
+ */
 const fetchGotTransactions = async (req, res) => {
     try{        
         let {account_number} = req.body;

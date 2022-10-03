@@ -22,6 +22,11 @@ const addAccount = async (req, res) => {
     }
 }
 
+/**
+ * This function is used to fetch all the accounts
+ * 
+ * @param {*} res 
+ */
 const getAccounts = async (req, res) => {
     try{        
         await Account.find({})
@@ -35,7 +40,11 @@ const getAccounts = async (req, res) => {
         res.status(500).send({error: error.message});
     }
 }
-
+/**
+ * This function is used to update an account by id
+ * @param {*} req 
+ * @param {*} res 
+ */
 const updateAccount = async(req,res) => {
     try{        
         if(req.params && req.body) {
@@ -52,6 +61,11 @@ const updateAccount = async(req,res) => {
     }
 }
 
+/**
+ * This function is used to delete an account by id
+ * @param {*} req 
+ * @param {*} res 
+ */
 const deleteAccount = async(req,res) => {
     try{        
         if(req.params) {
